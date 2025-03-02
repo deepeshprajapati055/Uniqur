@@ -1,14 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" 
-						th:replace="header::Layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="header::Layout(~{::section})">
 <head>
 <meta charset="UTF-8">
 <title>HomePage</title>
 </head>
 <body>
-	<section>
-		<h1>This is main page</h1>
-		<h1>We are building springboot project!</h1>
+	<section class="custome-search">
+		<!-- HERO SECTION START -->
+		<div class="banner d-flex justify-content-center align-items-center">
+			<div class="text-center">
+				<h1 class="fw-bold text-heading">Welcome to UNIQUR</h1>
+				<p class="text-paragraph">Start collecting your contact in very smarter way.<br>We provide very efficient and smarter way of handling contacts.</p>
+				<a th:href="@{/login}" class="btn own-btn">Get Started <i class="ps-1 bi bi-arrow-right-circle"></i></a>
+			</div>
+		</div>
+		<!-- HERO SECTION END -->
+		<!-- ABOUT US SECTION START -->
+		<div class="container pt-5 pb-5" id="aboutus">
+			<div class="row pt-5">
+				<div class="col-md-12 ps-4 pe-4">
+					<div
+						class="card custom-background mx-auto p-5 shadow p-3 mb-5 glass-card"
+						style="max-width: 1000px">
+						<h1 class="text-center fs-2 text-paragraph">About Us</h1>
+						<div class="divider-about"></div>
+						<p id="aboutText" class="text-paragraph pt-4">
+							<b class="text-heading">Uniqur – The Smart Contact Manager</b> At
+							Uniqur is an intelligent and efficient contact management system designed to keep your connections organized, secure, and easily accessible. Whether you're an individual or a business professional, Uniqur helps you store, manage, and retrieve contact details effortlessly.<br>
+							<br><b class="text-heading">Why Choose Us?</b>
+							<br>✔ Smart Contact Storage – Save and categorize contacts with ease.
+							<br>✔ Secure & Encrypted – Keep your data safe with advanced security measures.
+							<br>✔ Search & Filter – Quickly find any contact using smart search and filters.
+							<br>✔ User-Friendly UI – Simple and intuitive design for a smooth experience.
+							<br>✔ Import & Export – Easily migrate contacts from different sources.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ABOUT US SECTION END -->
+		<!-- FAQs SECTION START -->
+		<div class="container pt-5 pb-5">
+			<div class="row">
+				<div class="col-md-6 p-5">
+					<h3 class="text-black">Some important FAQ's</h3>
+					<h1 class="text-paragraph pb-4">Everything You Need to Know
+						🤔</h1>
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed own-btn own-btn-hover"
+									type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne" aria-expanded="false"
+									aria-controls="flush-collapseOne">Q: How can I add a new contact in Uniqur?</button>
+							</h2>
+							<div id="flush-collapseOne"
+								class="accordion-collapse collapse primary-color"
+								aria-labelledby="flush-headingOne"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">A: You can easily add a new contact by navigating to the "Add Contact" section, filling in the necessary details (name, phone, email, etc.), and saving it.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed own-btn own-btn-hover"
+									type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseTwo" aria-expanded="false"
+									aria-controls="flush-collapseTwo">Q: Is my contact data secure in Uniqur?</button>
+							</h2>
+							<div id="flush-collapseTwo"
+								class="accordion-collapse collapse primary-color"
+								aria-labelledby="flush-headingTwo"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">A: Absolutely! We use end-to-end encryption and secure authentication methods to ensure your data is protected and accessible only to you.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed own-btn own-btn-hover"
+									type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseThree" aria-expanded="false"
+									aria-controls="flush-collapseThree">Q: Can I share my contacts with others?</button>
+							</h2>
+							<div id="flush-collapseThree"
+								class="accordion-collapse collapse primary-color"
+								aria-labelledby="flush-headingThree"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">A: Yes, Uniqur allows you to share selected contacts securely with team members or clients using controlled access.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 p-4">
+					<img th:src="@{../img/about.png}" width="100%" alt="faQ-image" loading="lazy"/>
+				</div>
+			</div>
+		</div>
+		<!-- FAQs SECTION END -->
 	</section>
 </body>
 </html>
