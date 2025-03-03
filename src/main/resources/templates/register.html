@@ -5,8 +5,45 @@
 <title></title>
 </head>
 <body>
-	<section>
-		<h1>This is registration page.</h1>
+	<section class="custom-background pb-5 pt-5">
+		<div class="container">
+			<div th:if="${message}" th:classappend="${message.type}" class="alert col-md-6 mx-auto mb-5" role="alert">
+				<p th:text="${message.content}"></p>
+			</div>
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card custome-search shadow-lg p-3 mb-5 rounded">
+						<div class="card-header bg-white">	
+							<h1 class="text-center text-black fw-bold fs-1">Sign Up</h1>
+						</div>
+						<div class="card-body register-control">
+							<form action="" th:action="@{/doRegistration}" method="POST" th:object="${user}">
+							<div class="mb-1">
+								<input type="text" class="form-control form-control-md" name="name" placeholder="Enter your name" /><br>
+							</div>
+							<div class="mb-1">
+								<input type="email" class="form-control form-control-md" name="email" placeholder="Enter your email" /><br>
+							</div>
+							<div class="mb-1">
+								<input type="password" class="form-control form-control-md" name="password" placeholder="Enter your password" /><br>
+							</div>
+							<div class="mb-1">
+								<input type="text" class="form-control form-control-md" name="about" placeholder="Tell me something about yourself." /><br>
+							</div>
+							<div class="mb-1 form-group form-check pb-2">
+								<input type="checkbox" name="agreement" class="form-check-input" />
+								<label>Accept terms and condition</label>
+							</div>
+								<button class="btn own-btn col-md-12 mb-2" type="submit"> Register</button><br>
+							</form>
+						</div>
+						<div class="card-footer bg-white text-center p-3">
+							Already have an account : <a th:href="@{/login}" class="text-black text-decoration-none">SignIn</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </body>
 </html>

@@ -12,7 +12,12 @@
 .custome-search{
 	background-color: #515A5A;
 }
-
+.register-control{
+	
+}
+.bg-white{
+	background-color: #515A5A !important;
+}
 .own-control{
 	min-width: 750px;
 	border-radius: 30px;
